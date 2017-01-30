@@ -18,19 +18,18 @@ npm install fil-file --save
 var filFile = require('fil-file');
 
 var fileDef =
-    [{
-        key: "$date",
-        value: "123"
-    },
+        [{
+        key: "$startDate",
+        value: "2017-01-23T00:00:00.001Z"
+        },
         {
-            key: "$startDate",
-            value: "10.10.40.60"
+            key: "$endDate",
+            value: "2017-01-30T00:00:00.001Z"
         }];
 
 
 filFile.parse(testData, fileDef, function (result) {
         console.log(result);
     });
-
 
 ```

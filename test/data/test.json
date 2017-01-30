@@ -1,0 +1,46 @@
+{
+  "body": {
+    "aggs": {
+      "orderTotalPerDay": {
+        "date_histogram": {
+          "field": "$date",
+          "interval": "",
+          "min_doc_count": 1
+        },
+        "aggs": {
+          "orders": {
+            "sum": {
+              "field": "total"
+            }
+          }
+        }
+      },
+      "sum_daily_orders": {
+        "sum_bucket": {
+          "buckets_path": "orderTotalPerDay>orders"
+        }
+      }
+    },
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "range": {
+              "date": {
+                "gte": "$startDate",
+                "lte": "$endDate"
+              }
+            }
+          },
+          {
+            "term": {
+              "channel": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

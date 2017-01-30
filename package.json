@@ -1,0 +1,25 @@
+{
+  "name": "fil",
+  "version": "0.0.1",
+  "description": "Simple Json file decorator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/previousdeveloper/fil.git"
+  },
+  "keywords": [
+    "translater"
+  ],
+  "author": "Gokhan Karadas <gokhan.karadas1992@gmail.com> (http://www.gokhankaradas.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/previousdeveloper/fil/issues"
+  },
+  "homepage": "https://github.com/previousdeveloper/fil/issues#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}

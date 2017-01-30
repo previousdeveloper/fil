@@ -13,7 +13,7 @@ npm install fil-file --save
 
 ## Usage
 
-```javacript
+```javascript
 
 var filFile = require('fil-file');
 
@@ -31,5 +31,5 @@ var fileDef =
 filFile.parse(testData, fileDef, function (result) {
         console.log(result);
     });
-
-```
+    
+    ```
